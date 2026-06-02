@@ -1,81 +1,222 @@
 # COURSE NOTES: .NET Development for Beginners (2024)
 
 
-## Video 02
-
-- **#GOTCHA:** Solution Explorer doesn't show up as in 2:10
-
-- **#SOLVED:** Her instructions only work if you don't already have a folder open. Start in a blank VSCODE window.
-- Here's my code following her simple interactive example
-  - #OBSERVATION: This is very similar in syntax to **PowerShell**
-
-```cs
-Console.WriteLine("What is your name?");
-var name = Console.ReadLine();
-var currentDate = DateTime.Now;
-Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d}");
-Console.Write($"{Environment.NewLine}Press any key to exit...");
-```
-
-## Video 03
-
-- NuGet.org
-
----
-
-## #SUMMARY/TLDR:
-
-> The course screenshot is just showing Visual Studio’s project tree, not actual folders, so `Dependencies` and `Frameworks` aren’t real directories on disk. In VS Code you just have Program.cs, the `.csproj`, and maybe an `.sln`; `slnx` is basically VS Code’s own metadata, while `sln` is the normal solution file you want for compatibility. In short: don’t sweat the missing folders, use the regular `.csproj`/`.sln` console app setup and treat the UI difference as just different editor plumbing.
-
-![Screenshot of Solution Explorer looking different than the VSCODE 'Explorer' sidebar](/_pix/screens/screen_01_solution-explorer-vid3.png)
-
-## #GOTCHA
-
-- `Dependencies` and `Frameworks` are IDE view nodes, not real folders on disk.
-- VS Code shows `Explorer`, while Visual Studio shows `Solution Explorer`; same project, different UI.
-- `Solution Explorer` can display package/reference groups even when those are not separate filesystem directories.
-- `*.slnx` is not the same as a standard solution file and is mainly VS Code metadata.
-- Newer .NET templates may look different in 2026 than the course screenshot from 2024.
-
-## #SOLUTIONS
-
-- Treat `Dependencies` / `Frameworks` as a tree view representation, not actual project directories.
-- Use Program.cs + `.csproj` + optional `*.sln` for a normal console app project.
-- Prefer `*.sln` for portability and compatibility across tools.
-- Open the `.sln` or `.csproj` in VS Code with the C# extension to get the richer project experience.
-- If you want the same behavior as the instructor, use the standard `dotnet new console` / `dotnet new sln` workflow and ignore the VS Code-specific `*.slnx` unless asked.
+## 0. Introduction
 
 
----
 
-### Steps to install and run the a NuGet package:
+### 0.0 .NET: The everywhere framework
 
-**Create Starter Console App**
 
-1. `CTRL + SHIFT + P` > .NET: New Project > Console App > [MyPasswordGenerator (or whatever your app name is)]
-2. Select whether to save in the current/default folder or a different folder
-3. Select **sln**
-4. Now your starter app is installed! :)
 
-**Install the Password Generator Package from NuGet**
 
-5. Navigate in a browser to: https://www.nuget.org/packages/PasswordGenerator#readme-body-tab
-6. Copy the `.NET CLI` snippet into your terminal
-7. CD into MyPasswordGenerator/ or whatever your project folder is
-8. Paste and run the following `.NET CLI` snippet:
+### 0.1 What you should know
 
-```cs
-dotnet add package PasswordGenerator --version 3.0.0
-```
-9. Add the following in `Program.cs`, and then type `dotnet run` in the terminal and it might take a few seconds on the first run but it should generate and display a complex password. Each time you run it will generate a different password.
+- He'll be using C# with VSCode
+- You can use regular Visual Studio, but VS 2022 on Mac doesn't support .NET 6, SO he'll just use VSCODE with command line
+- No prior .NET experience is needed
 
-- #ERICS_CODE
+PREREQUISITES:
+- Programming foundations: fundamentals
+- Programming foundations: Object-Oriented Design
+- Basic understanding of C#:
+  - Learning C# course
+- Visual Studio Essential Training
 
-```cs
-using PasswordGenerator;
+> #GOTCHA: Paused this course to check out the C# course first
 
-var pwd = new Password();
-var password = pwd.Next();
 
-Console.WriteLine(password.ToString());
-```
+### 0.2 Installing .NET
+
+
+
+
+### 0.3 Exercise Files
+
+
+
+
+### 0.4 Tour of CoderPad
+
+
+
+
+## 1. Overview of .NET
+
+
+
+
+### 1.0 What is .NET?
+
+
+
+
+### 1.1 Building a console application
+
+
+
+
+### 1.2 Basic .NET data types
+
+
+
+
+### 1.3 .NET garbage collection
+
+
+
+
+## 2. Working with Strings
+
+
+
+
+### 2.0 String interpolation
+
+
+
+
+### 2.1 String formatting
+
+
+
+
+### 2.2 String manipulation
+
+
+
+
+### 2.3 String searching
+
+
+
+
+### 2.4 </> Code Challenge: Strings
+
+
+
+
+### 2.5 Solution: Strings
+
+
+
+
+## 3. Using Numbers and Dates
+
+
+
+
+### 3.0 Parsing numbers
+
+
+
+
+### 3.1 Formatting numerical data
+
+
+
+
+### 3.2 Using the DateTime class
+
+
+
+
+### 3.3 Formatting dates and times
+
+
+
+
+### 3.4 Parsing dates
+
+
+
+
+### 3.5 </> Code Challenge: How many days?
+
+
+
+
+### 3.6 CoderPad Solution: How many days?
+
+
+
+
+## 4. Working with Files
+
+
+
+
+### 4.0 Creating files
+
+
+
+
+### 4.1 Reading and writing files
+
+
+
+
+### 4.2 Inspecting file information
+
+
+
+
+### 4.3 Working with directories
+
+
+
+
+### 4.4 Challenge: Files and directories
+
+
+
+
+### 4.5 Solution: Files and directories
+
+
+
+
+## 5. Regular Expressions
+
+
+
+
+### 5.0 RegEx and .NET
+
+
+
+
+### 5.1 Finding and matching content
+
+
+
+
+### 5.2 Replacing content
+
+
+
+
+### 5.3 Using RegEx timeouts
+
+
+
+
+### 5.4 </> Code Challenge: Regular expressions
+
+
+
+
+### 5.5 Solution: Regular expressions
+
+
+
+
+## 6. Conclusion
+
+
+
+
+### 6.0 Next steps
+
+
+
