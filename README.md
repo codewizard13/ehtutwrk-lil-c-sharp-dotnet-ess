@@ -49,8 +49,6 @@ Learn C# and .NET fundamentals.
 
 <p>Microsoft .NET is a modern, cross-platform framework for developing applications for the web, desktop, and mobile devices. This course gives an introduction to some of the features of .NET that makes building applications easier, more performant, and more productive. Veteran technologist Joe Marini demonstrates how to use built-in capabilities of .NET such as string processing, data collection types, number and date formatting, reading and writing files, and even working with regular expressions. Joe also introduces hands-on code challenges to help you practice what you learn. By using these built-in features, you can focus more on your core application logic and less on having to build common capabilities from scratch.</p>
 
-<p>This course was created by the Microsoft .NET team. We are pleased to host this training in our library.</p>
-          
 ## Contributors
 
 Thank you so much to all who've given time and energy to this project!
